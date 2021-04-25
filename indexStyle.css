@@ -1,26 +1,47 @@
 /* layout */
 body{
     margin : 0 auto;
+    padding : 0;
+    box-sizing: border-box;
 }
 header{
     background: #111111e8;
     height: 10vh;
+    width: 83%;
+    display: flex;
+    float: right;
+}
+#sidebar{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 17%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    background-color: rgba(0, 0, 0, 0.904); /* Black */
 }
 #banner{
-    height: 430px;
+    height: 420px;
     background : rgba(235, 235, 235, 0.815);
+    width: 83%;
+    display: flex;
+    float: right;
 }
 #contents{
-    height: 400px;
+    height: 470px;
     background: #222222;
+    width: 83%;
+    display: flex;
+    float: right;
 }
 footer{
-    height: 10vh;
-    background: #111111f8;
+    height: 12vh;
+    width: 100%;
+    background: #111111;
+    position : fixed;
+    z-index : 2;
 }
 .container{
     margin: 0 auto;
-    width: 66%;
+    width: 80%;
 }
 
 /* header */
@@ -43,7 +64,7 @@ nav{
 }
 
 header .container .nav{
-    color: #fff;
+    color: rgba(235, 235, 235, 0.986);
     transition: 0.4s;
     letter-spacing: 1px;
     font-size: 20px;
@@ -93,6 +114,33 @@ header .container a:hover {
     width: 0;
 }
 
+/* sidebar */
+#sidebar{
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+#sidebar .container{
+    margin: 20px;
+}
+#sidebar a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #b3b3b3;
+    display: block;
+    font-weight: bold;
+}
+#sidebar ul{
+    padding: 0;
+}
+#sidebar li{
+    list-style : none;
+}
+#sidenav a:hover {
+    color: #f1f1f1;
+  }
 
 /* banner */
 #banner h2{
@@ -102,7 +150,6 @@ header .container a:hover {
 
 .mySlides {
     display: none;
-    box-sizing: border-box;
 }
 
 #first{
@@ -239,4 +286,82 @@ header .container a:hover {
     font-size: 22px;
     font-weight:bold;
     color: white;
+}
+
+/* footer */
+footer{
+    overflow : hidden;
+    bottom : 0;
+}
+footer .container{
+    height:100%;
+    width: 90%;
+    display: flex;
+}
+
+/* album info */
+.playing-album img{
+    height: 60px;
+    width: 60px;
+}
+.playing-album{
+   display: flex;
+   align-items: center;
+}
+.playing-album .album-info{
+    display: block;
+    padding: 15px;
+}
+.playing-album span{
+    color: rgba(255, 255, 255, 0.897);
+    font-size : 13px;
+    display: block;
+}
+.playing-album .title{
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+}
+.playing-album i{
+    color: orangered;
+}
+
+/* player */
+.player{
+    height:100%;
+    width: 130px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin-left: 40%;
+    padding: 20px 0;
+}
+.player i{
+    color: white;
+    font-size : 35px;
+    transition: 0.3s;
+}
+.player i:hover{
+    color : orangered; 
+}
+.player .step{
+    color:rgba(235, 235, 235, 0.815);
+    font-size : 20px;
+    padding: 7px 0;
+}
+#progress-bar {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 67px;
+    width: 40%;
+    background-color: grey;
+    height: 5px;
+    border-radius: 10px;
+}
+  
+#myBar {
+    width: 1%;
+    height: 5px;
+    background-color: green;
+    border-radius: 10px;
 }

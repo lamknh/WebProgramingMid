@@ -11,6 +11,7 @@
     <!-- web icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script type="text/javascript" src="progressBar.js"></script>
     <title>2019117865김나형</title>
 </head>
 <body>
@@ -32,7 +33,15 @@
             </nav>
         </div>
     </header>
-
+    <div id="sidebar">
+        <div class="container">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">내 라이브러리</a></li>
+                <li><a href="#">좋아요 표시한 곡</a></li>
+            </ul>
+        </div>
+    </div>
     <div id="banner">
         <div class="container">
             <h2>HIT</h2>
@@ -96,11 +105,26 @@
     </div>
     <footer>
         <div class="container">
-
+            <div class="playing-album">
+                <img src="sources/cover1.jpg">             
+                <div class="album-info">
+                    <span class="title">Go for Gold!</span>
+                    <span>Kyle Patrick</span>
+                </div>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>
+            <div class="player">
+                <i class="fa fa-step-backward step" aria-hidden="true"></i>
+                <i class="fa fa-play-circle" aria-hidden="true" onclick=move()></i>
+                <i class="fa fa-step-forward step" aria-hidden="true"></i>
+            </div>
+            <div id="progress-bar">
+                <div id="myBar"></div>
+            </div>
         </div>
     </footer>
 
     <!-- js -->
-    <script type="text/javascript" src="indexJquery.js"></script>
+    <script type="text/javascript" src="slide.js"></script>
 </body>
 </html>
