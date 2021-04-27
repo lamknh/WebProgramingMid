@@ -152,8 +152,16 @@
                 </div>               
             </div>
             <div class="volume">
-                <i class="fa fa-list-ul" aria-hidden="true"></i>
-                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <div class="volume-container">
+                    <div class="volume-control">
+                        <i class="fa fa-volume-up" id="volume" aria-hidden="true"></i>
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>                        
+                    </div>
+                    <div class="volume-bar">
+                        <input type="range", min="0", max="100" value="40" id="myRange" class="slider">
+                    </div>
+                </div> 
             </div>
         </div>
     </footer>
@@ -161,5 +169,6 @@
         <script type="text/javascript" src="slide.js"></script>
         <script type="text/javascript" src="player.js"></script>
         <script type="text/javascript" src="heart.js"></script>
+        <script type="text/javascript" src="mute.js"></script>
 </body>
 </html>

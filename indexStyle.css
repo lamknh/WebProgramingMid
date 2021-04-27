@@ -310,7 +310,7 @@ footer{
 }
 footer .container{
     height:100%;
-    width: 90%;
+    width: 93%;
     display: flex;
 }
 
@@ -322,7 +322,7 @@ footer .container{
 .playing-album{
    display: flex;
    align-items: center;
-   flex: 0.4;
+   flex: 0.3;
 }
 .playing-album .album-info{
     display: block;
@@ -341,10 +341,15 @@ footer .container{
 .playing-album i{
     color: orangered;
 }
+#heart-icon:hover{
+    transition: 0.2s ease-in;
+    transform:scale(1.2);
+    cursor:pointer;
+}
 
 /* control */
 .player{
-    flex: 0.3;
+    flex: 0.4;
 }
 .control{
     margin: 0 150px;
@@ -386,7 +391,7 @@ footer .container{
     align-items: center;
     width: 600px;
 }
-#bar{
+.progress-bar #bar{
     width: 100%;
     background-color: grey;
     height: 5px;
@@ -410,13 +415,36 @@ footer .container{
 
 /* volume */
 .volume{
-    flex: 0.4;
+    flex: 0.3;
+}
+.volume-container{
+    height: 100%;
     display: flex;
     align-items: center;
+    float: right;
 }
 .volume i{
     float: right;
     color: white;
-    padding: 4px;
-    font-size : 20px;
+    padding: 0 16px 0 0;
+    font-size : 18px;
+}
+.volume-control{
+    cursor: pointer;
+}
+#volume:hover{
+    transition: 0.4s ease-in-out;
+    transform:scale(1.2);
+}
+.volume-bar #myRange{
+    width: 130px;
+    background-color: grey;
+    height: 5px;
+    border-radius: 10px;
+    margin: 0 0 13px 0;
+    opacity: 0.7;
+    -webkit-transform: 0.2s;
+}
+#myRange:hover{
+    cursor: pointer;
 }
