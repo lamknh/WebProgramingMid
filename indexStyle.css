@@ -124,13 +124,24 @@ header .container a:hover {
 #sidebar .container{
     margin: 20px;
 }
+#sidebar li{
+    font-size: 18px;
+    color: #b3b3b3;
+    display: flex;
+    align-items: center;
+    transition: 0.4s ease;
+}
+#sidebar i {
+    font-size : 20px;
+    padding: 0 0 0 13px;
+}
 #sidebar a{
-    padding: 6px 8px 6px 16px;
+    padding: 8px 8px 8px 16px;
     text-decoration: none;
-    font-size: 16px;
     color: #b3b3b3;
     display: block;
     font-weight: bold;
+    transition: 0.4s ease;
 }
 #sidebar ul{
     padding: 0;
@@ -138,9 +149,23 @@ header .container a:hover {
 #sidebar li{
     list-style : none;
 }
-#sidenav a:hover {
-    color: #f1f1f1;
-  }
+#sidebar li:hover{
+    color: white;
+}
+#sidebar a:hover {
+    color: white;
+}
+
+#sidebar .side-playlist h2{
+    padding: 10px 0 0 0 ; 
+    color:white;
+    font-size: 20px;
+}
+
+#sidebar .side-playlist li{
+    padding: 6px 8px 6px 5px;
+    font-size : 16px;
+}
 
 /* banner */
 #banner h2{
@@ -156,7 +181,8 @@ header .container a:hover {
     display: block;
 }
 .banner .container img {
-    vertical-align: middle;
+    max-height: 100px;
+    max-width: 100%;
 }
 
 /* Slideshow container */
@@ -164,22 +190,7 @@ header .container a:hover {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
+}z
 
 /* Position the "next button" to the right */
 .next {
@@ -277,6 +288,10 @@ header .container a:hover {
     height: 200px;
     padding : 10px;
 }
+#contents img:hover{
+    box-shadow: 10px;
+}
+
 #contents span{
     display: block;
     color: rgba(255, 255, 255, 0.787);
@@ -307,6 +322,7 @@ footer .container{
 .playing-album{
    display: flex;
    align-items: center;
+   flex: 0.4;
 }
 .playing-album .album-info{
     display: block;
@@ -326,42 +342,81 @@ footer .container{
     color: orangered;
 }
 
-/* player */
+/* control */
 .player{
-    height:100%;
-    width: 130px;
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    margin-left: 40%;
-    padding: 20px 0;
+    flex: 0.3;
 }
-.player i{
+.control{
+    margin: 0 150px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 10px 0;
+    align-items: center;
+    cursor:pointer;
+}
+.control i{
     color: white;
     font-size : 35px;
     transition: 0.3s;
 }
-.player i:hover{
+.control i:hover{
     color : orangered; 
 }
-.player .step{
+.control .play-btn:hover{
+    transition: 0.2s ease-in-out;
+    transform:scale(1.2);
+}
+.control .step{
     color:rgba(235, 235, 235, 0.815);
     font-size : 20px;
     padding: 7px 0;
 }
-#progress-bar {
-    position: absolute;
-    margin-left: 25%;
-    margin-top: 67px;
-    width: 40%;
+.control .play{
+    font-size: 20px;
+    color : orangered; 
+}
+.control .play:hover{
+    color:white;
+}
+
+/* progress */
+.progress-bar{
+    display:flex;
+    align-items: center;
+    width: 600px;
+}
+#bar{
+    width: 100%;
     background-color: grey;
     height: 5px;
     border-radius: 10px;
 }
   
-#myBar {
-    width: 1%;
+#progress{
+    width: var(--progress, 0%);
+    transition: all 1s linear;
     height: 5px;
     background-color: green;
     border-radius: 10px;
+}
+
+#current, #end{
+    display: flex;
+    color: white;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+/* volume */
+.volume{
+    flex: 0.4;
+    display: flex;
+    align-items: center;
+}
+.volume i{
+    float: right;
+    color: white;
+    padding: 4px;
+    font-size : 20px;
 }

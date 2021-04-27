@@ -11,7 +11,6 @@
     <!-- web icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script type="text/javascript" src="progressBar.js"></script>
     <title>2019117865김나형</title>
 </head>
 <body>
@@ -36,9 +35,27 @@
     <div id="sidebar">
         <div class="container">
             <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">내 라이브러리</a></li>
-                <li><a href="#">좋아요 표시한 곡</a></li>
+                <li>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <a href="#">홈</a>
+                </li>
+                <li>
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    <a href="#">내 라이브러리</a>
+                </li>
+                <li>
+                    <i class="fa fa-heart heart-icon" aria-hidden="true"></i>
+                    <a href="#">좋아요 표시한 곡</a>
+                </li>
+            </ul>
+            <ul class="side-playlist">
+                <h2>플레이리스트</h2>
+                <hr>
+                <ul>
+                    <li>Hip-Hop</li>
+                    <li>Rock</li>
+                    <li>Pop</li>
+                </ul>
             </ul>
         </div>
     </div>
@@ -48,19 +65,19 @@
             <div class="slideshow-container">
                 <div class="mySlides fade" id="first">
                   <div class="numbertext">1 / 3</div>
-                  <img src="http://placehold.it/300x100" style="width:100%">
+                  <img src="./src/image1.jpg" style="width:100%; height:320px;">
                   <div class="text">Caption One</div>
                 </div>
                 
                 <div class="mySlides fade">
                   <div class="numbertext">2 / 3</div>
-                  <img src="http://placehold.it/300x100" style="width:100%">
+                  <img src="./src/image2.jpg" style="width:100%; height:320px;">
                   <div class="text">Caption Two</div>
                 </div>
                 
                 <div class="mySlides fade">
                   <div class="numbertext">3 / 3</div>
-                  <img src="http://placehold.it/300x100" style="width:100%">
+                  <img src="./src/image3.jpg" style="width:100%; height:320px;">
                   <div class="text">Caption Three</div>
                 </div>
                 
@@ -81,22 +98,22 @@
             <h2>Recently Played</h2>
             <div class="albums">
                 <div class="album kylepatrick">
-                    <img src="sources/cover1.jpg">
+                    <img src="src/cover1.jpg">
                     <span class="title">Kyle Patrick</span>
                     <span>Kyle Patrick</span>
                 </div>
                 <div class="album the1975">
-                    <img src="sources/cover2.jpg">
+                    <img src="src/cover2.jpg">
                     <span class="title">The 1975</span>
                     <span>The 1975</span>
                 </div>
                 <div class="album theclickfive">
-                    <img src="sources/cover3.jpg">
+                    <img src="src/cover3.jpg">
                     <span class="title">TCV</span>
                     <span>the Click Five</span>
                 </div>
                 <div class="album wheatus">
-                    <img src="sources/cover4.jpg">
+                    <img src="src/cover4.jpg">
                     <span class="title">Lemonade</span>
                     <span>Wheatus</span>
                 </div>
@@ -106,25 +123,43 @@
     <footer>
         <div class="container">
             <div class="playing-album">
-                <img src="sources/cover1.jpg">             
+                <img src="src/cover.jpg">             
                 <div class="album-info">
-                    <span class="title">Go for Gold!</span>
+                    <span class="title">Another Life</span>
                     <span>Kyle Patrick</span>
                 </div>
-                <i class="fa fa-heart" aria-hidden="true"></i>
+                <i class="fa fa-heart" id="heart-icon" aria-hidden="true"></i>
             </div>
+            <audio id="player" src="./src/AnotherLife.mp3"></audio>
             <div class="player">
-                <i class="fa fa-step-backward step" aria-hidden="true"></i>
-                <i class="fa fa-play-circle" aria-hidden="true" onclick=move()></i>
-                <i class="fa fa-step-forward step" aria-hidden="true"></i>
+                <div class="control">
+                    <i class="fa fa-random play" aria-hidden="true"></i>
+                    <i class="fa fa-step-backward step" aria-hidden="true"></i>
+                    <i class="fa fa-play-circle play-btn" id="playbtn"aria-hidden="true"></i>
+                    <i class="fa fa-step-forward step" aria-hidden="true"></i>
+                    <i class="fa fa-repeat play" aria-hidden="true"></i>
+                </div>
+                <div class="progress-bar">
+                    <div id="current">
+                        0:00
+                    </div>
+                    <div id="bar">
+                        <div id="progress"></div>
+                    </div>
+                    <div id="end">
+                        4:16
+                    </div>
+                </div>               
             </div>
-            <div id="progress-bar">
-                <div id="myBar"></div>
+            <div class="volume">
+                <i class="fa fa-list-ul" aria-hidden="true"></i>
+                <i class="fa fa-desktop" aria-hidden="true"></i>
             </div>
         </div>
     </footer>
-
-    <!-- js -->
-    <script type="text/javascript" src="slide.js"></script>
+        <!-- js -->
+        <script type="text/javascript" src="slide.js"></script>
+        <script type="text/javascript" src="player.js"></script>
+        <script type="text/javascript" src="heart.js"></script>
 </body>
 </html>
