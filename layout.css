@@ -1,0 +1,39 @@
+/* layout */
+body{
+    margin : 0 auto;
+    padding : 0;
+    box-sizing: border-box;
+}
+header{
+    background: #111111e8;
+    height: 10vh;
+    width: 83%;
+    display: flex;
+    float: right;
+}
+#sidebar{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 17%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    background-color: rgba(0, 0, 0, 0.904); /* Black */
+}
+#contents{
+    min-height: 78vh;
+    height: 100%;
+    background: #222222;
+    width: 83%;
+    display: flex;
+    float: right;
+}
+footer{
+    height: 12vh;
+    width: 100%;
+    background: #111111;
+    position : fixed;
+    z-index : 2;
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+}
