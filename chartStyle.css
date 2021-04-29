@@ -27,7 +27,8 @@ header{
 }
 #contents{
     min-height: 78vh;
-    height: 800px;
+    /*height: 800px;*/
+    height: 1120px;
     background: #222222;
     width: 83%;
     display: flex;
@@ -206,6 +207,7 @@ header .container a:hover {
     display: block;
     color: rgba(255, 255, 255, 0.787);
     padding: 5px 0 0 15px;
+    font-size:10px;
 }
 #contents .title{
     font-size: 12px;
